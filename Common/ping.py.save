@@ -1,0 +1,26 @@
+import subprocess
+import os
+import json
+with open('servers.txt', 'r') as f:
+        for ip in f:
+            result=subprocess.Popen(["ping", "-c", "1", "-n", "-W", "2",    ip],stdout=f, stderr=f).wait()
+            data = {
+                   "result": {
+                             "name": "ping",
+                             "ip":ip,
+                             "result":result
+                              }
+            }
+            if result:
+                print(ip, "inactive")
+                with open('data.json', 'ab+') as feedsjson:
+                        feeds = json.load(feedsjson)
+			feeds.append(data)
+			json.dump(feeds,feedsjson)
+            else:
+                print(ip, "active")
+		with open('data.json', 'ab+y
+') as feedsjson:
+                        feeds = json.load(feedsjson)
+			feeds.append(data)
+			json.dump(feeds,feedsjson)

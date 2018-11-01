@@ -1,0 +1,36 @@
+{
+    "tests": {
+        "timestamp": "2018-11-01 06:18:29", 
+        "testName": "pingtest", 
+        "result": {
+            "192.168.1.1\n": {
+                "result": {
+                    "ip": "192.168.1.1\n", 
+                    "name": "ping", 
+                    "result": 1
+                }
+            }, 
+            "192.168.1.2\n": {
+                "result": {
+                    "ip": "192.168.1.2\n", 
+                    "name": "ping", 
+                    "result": 1
+                }
+            }, 
+            "192.168.1.111\n": {
+                "result": {
+                    "ip": "192.168.1.111\n", 
+                    "name": "ping", 
+                    "result": 1
+                }
+            }, 
+            "192.168.1.132\n": {
+                "result": {
+                    "ip": "192.168.1.132\n", 
+                    "name": "ping", 
+                    "result": 1
+                }
+            }
+        }
+    }
+}

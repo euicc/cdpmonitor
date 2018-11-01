@@ -1,0 +1,9 @@
+{
+   "PLATFORM":{
+     "NAME":"CDP",
+     "NodeType":"Worker"
+  },
+   "COMMON":{
+	   "NAME":"Common"
+  }
+}
