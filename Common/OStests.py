@@ -4,6 +4,9 @@ import csv
 import time
 import datetime
 import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import settings
+from termcolor import colored
 ts = time.time()
 
 
@@ -45,4 +48,42 @@ def usedSpace():
 	else:
         	print "UKNOWN - %s of disk space used." % used_space
         	sys.exit(3)
+
+def usedMemory():
+	tot_m, used_m, free_m = map(int, os.popen('free -t -m').readlines()[-1].split()[1:])
+	swap_t, swap_u, swap_f = map(int, os.popen('free -t -m').readlines()[-2].split()[1:])
+
+	mem_critic = settings.config['Memory Threshold']['CRITICAL']
+	mem_major = settings.config['Memory Threshold']['MAJOR']
+	mem_warning = settings.config['Memory Threshold']['WARNING']
+
+	swap_percent = swap_u*100/swap_t
+
+	if swap_percent < int(mem_warning) :
+        	print colored("--- SWAP usage OK --- ",'green')
+        	print("SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%")
+	elif swap_percent >= int(mem_warning) and swap_percent < int(mem_major):
+        	print colored("--- SWAP usage NOK --- in Warning alarm", 'yellow')
+        	print("SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%")
+	elif swap_percent >= int(mem_major) and swap_percent < int(mem_critic):
+        	print colored("--- SWAP usage NOK --- in Major alarm", 'magenta')
+        	print("SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%")
+	elif swap_percent >= int(mem_critic):
+        	print colored("--- SWAP usage NOK --- in Critical alarm", 'red')
+        	print("SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%")
+
+	mem_percent =  int(used_m*100/tot_m)
+
+	if mem_percent < int(mem_warning):
+        	print colored("--- MEMORY usage OK --- ",'green')
+        	print("MEMORY Total:" + str(tot_m) + " Usage:" + str(used_m) + " Free:" + str(free_m) + " Used:" + str(mem_percent) + "%")
+	elif mem_percent >= int(mem_warning) and mem_percent < int(mem_major):
+        	print colored("--- MEMORY usage NOK --- in Warning alarm", 'yellow')
+        	print("MEMORY Total:" + str(tot_m) + " Usage:" + str(used_m) + " Free:" + str(free_m) + " Used:" + str(mem_percent) + "%")
+	elif mem_percent >= int(mem_major) and mem_percent < int(mem_critic):
+        	print colored("--- MEMORY usage NOK --- in Major alarm", 'magenta')
+        	print("MEMORY Total:" + str(tot_m) + " Usage:" + str(used_m) + " Free:" + str(free_m) + " Used:" + str(mem_percent) + "%")
+	elif mem_percent >= int(mem_critic):
+        	print colored("--- MEMORY usage NOK --- in Critical alarm", 'red')
+        	print("MEMORY Total:" + str(tot_m) + " Usage:" + str(used_m) + " Free:" + str(free_m) + " Used:" + str(mem_percent) + "%")
 

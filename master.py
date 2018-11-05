@@ -1,14 +1,15 @@
 import os
 from termcolor import colored
 import json
+import settings
 from Common import OStests
 
-with open('config.json', 'r') as f:
-    config = json.load(f)
+#with open('config.json', 'r') as f:
+#    config = json.load(f)
 
 results = []
-testdir = config['COMMON']['NAME'] # 'product'
-tests=["pingAllHosts","usedSpace"]
+testdir = settings.config['COMMON']['NAME'] # 'product'
+tests=["usedMemory","pingAllHosts","usedSpace"]
 #print os.listdir(testdir)
 #for f in os.listdir(testdir):
 #  if f.endswith('.py'):
