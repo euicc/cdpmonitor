@@ -5,5 +5,10 @@
   },
    "COMMON":{
 	   "NAME":"Common"
+  },
+   "Memory Threshold":{
+     "CRITICAL":"95",
+     "MAJOR":"80",
+     "WARNING":"70"
   }
 }
