@@ -15,6 +15,16 @@ timestamp = datetime.datetime.fromtimestamp(int(ts)).strftime('%Y-%m-%d %H:%M:%S
 
 filename = "results/result.csv"
 
+
+def checkProcess():
+ output = subprocess.check_output(['ps', '-A'])
+ processes  = ["httpd","openhab2","sshd"]
+ for i in processes:
+  if i in output:
+    print(i + " is up an running!")
+  else:
+    print(i+ " is not running!")
+
 def pingAllHosts():
   with open('servers.txt', 'r') as f:
       lines = f.readlines()
@@ -38,16 +48,12 @@ def usedSpace():
 
 	if used_space < "85%":
         	print "OK - %s of disk space used." % used_space
-        	sys.exit(0)
 	elif used_space == "85%":
         	print "WARNING - %s of disk space used." % used_space
-        	sys.exit(1)
 	elif used_space > "85%":
         	print "CRITICAL - %s of disk space used." % used_space
-        	sys.exit(2)
 	else:
         	print "UKNOWN - %s of disk space used." % used_space
-        	sys.exit(3)
 
 def usedMemory():
 	tot_m, used_m, free_m = map(int, os.popen('free -t -m').readlines()[-1].split()[1:])

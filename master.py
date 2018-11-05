@@ -9,7 +9,7 @@ from Common import OStests
 
 results = []
 testdir = settings.config['COMMON']['NAME'] # 'product'
-tests=["usedMemory","pingAllHosts","usedSpace"]
+tests=["usedMemory","pingAllHosts","usedSpace","checkProcess"]
 #print os.listdir(testdir)
 #for f in os.listdir(testdir):
 #  if f.endswith('.py'):
