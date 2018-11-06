@@ -15,6 +15,20 @@ timestamp = datetime.datetime.fromtimestamp(int(ts)).strftime('%Y-%m-%d %H:%M:%S
 
 filename = "results/result.csv"
 
+if "check_output" not in dir( subprocess ): # duck punch it in!
+    def f(*popenargs, **kwargs):
+        if 'stdout' in kwargs:
+            raise ValueError('stdout argument not allowed, it will be overridden.')
+        process = subprocess.Popen(stdout=subprocess.PIPE, *popenargs, **kwargs)
+        output, unused_err = process.communicate()
+        retcode = process.poll()
+        if retcode:
+            cmd = kwargs.get("args")
+            if cmd is None:
+                cmd = popenargs[0]
+            raise subprocess.CalledProcessError(retcode, cmd)
+        return output
+    subprocess.check_output = f
 
 def checkProcess():
  testname= "checkProcess"
@@ -69,24 +83,30 @@ def usedMemory():
 	mem_major = settings.config['Memory Threshold']['MAJOR']
 	mem_warning = settings.config['Memory Threshold']['WARNING']
 
-	swap_percent = swap_u*100/swap_t
+	if (swap_t !=0):
+                swap_percent = swap_u*100/swap_t
+                if swap_percent < int(mem_warning) :
+                        print colored("--- SWAP usage OK --- ",'green')
+                        print("SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%")
+                        logTestResult(testname,"SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%","")
+                elif swap_percent >= int(mem_warning) and swap_percent < int(mem_major):
+                        print colored("--- SWAP usage NOK --- in Warning alarm", 'yellow')
+                        print("SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%")
+                        logTestResult(testname,"SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%","")
+                elif swap_percent >= int(mem_major) and swap_percent < int(mem_critic):
+                        print colored("--- SWAP usage NOK --- in Major alarm", 'magenta')
+                        print("SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%")
+                        logTestResult(testname,"SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%","")
+                elif swap_percent >= int(mem_critic):
+                        print colored("--- SWAP usage NOK --- in Critical alarm", 'red')
+                        print("SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%")
+                        logTestResult(testname,"SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%","")
+        else:
+                swap_percent = swap_u
+                print colored("--- SWAP Not initialized --- ",'green')
+                print("SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%")
+                logTestResult(testname,"SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%","")
 
-	if swap_percent < int(mem_warning) :
-        	print colored("--- SWAP usage OK --- ",'green')
-        	print("SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%")
-	        logTestResult(testname,"SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%","")
-	elif swap_percent >= int(mem_warning) and swap_percent < int(mem_major):
-        	print colored("--- SWAP usage NOK --- in Warning alarm", 'yellow')
-        	print("SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%")
-		logTestResult(testname,"SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%","")
-	elif swap_percent >= int(mem_major) and swap_percent < int(mem_critic):
-        	print colored("--- SWAP usage NOK --- in Major alarm", 'magenta')
-        	print("SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%")
-		logTestResult(testname,"SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%","")
-	elif swap_percent >= int(mem_critic):
-        	print colored("--- SWAP usage NOK --- in Critical alarm", 'red')
-        	print("SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%")
-		logTestResult(testname,"SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%","")
 
 	mem_percent =  int(used_m*100/tot_m)
 
