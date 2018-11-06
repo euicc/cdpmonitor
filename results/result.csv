@@ -38,3 +38,11 @@ usedSpace,2018-11-06 09:47:53,Disk space 3%,OK
 checkProcess,2018-11-06 09:47:53,httpd is not running!,
 checkProcess,2018-11-06 09:47:53,openhab2 is not running!,
 checkProcess,2018-11-06 09:47:53,sshd is up an running!,
+usedMemory,2018-11-06 10:46:20,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-06 10:46:20,MEMORY Total:12526 Usage:776 Free:10692 Used:6%,
+ping,2018-11-06 10:46:20,127.0.0.1,inactive
+ping,2018-11-06 10:46:20,192.168.1.1,inactive
+usedSpace,2018-11-06 10:46:20,Disk space 3%,OK
+checkProcess,2018-11-06 10:46:20,httpd is not running!,
+checkProcess,2018-11-06 10:46:20,openhab2 is not running!,
+checkProcess,2018-11-06 10:46:20,sshd is up an running!,
