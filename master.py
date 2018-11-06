@@ -1,5 +1,5 @@
 import os
-from termcolor import colored
+from modules.termcolor.termcolor import colored
 import json
 import settings
 from Common import OStests

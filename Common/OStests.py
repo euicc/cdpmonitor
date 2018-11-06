@@ -6,7 +6,7 @@ import datetime
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import settings
-from termcolor import colored
+from modules.termcolor.termcolor import colored
 ts = time.time()
 
 
