@@ -1,40 +1,16 @@
-usedMemory,2018-11-06 02:41:52,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
-usedMemory,2018-11-06 02:41:52,MEMORY Total:16558 Usage:765 Free:14864 Used:4%,
-ping,2018-11-06 02:41:52,127.0.0.1,inactive
-ping,2018-11-06 02:41:52,192.168.1.1,inactive
-usedSpace,2018-11-06 02:41:52,Disk space 3%,OK
-checkProcess,2018-11-06 02:41:52,httpd is not running!,
-checkProcess,2018-11-06 02:41:52,openhab2 is not running!,
-checkProcess,2018-11-06 02:41:52,sshd is up an running!,
-usedMemory,2018-11-06 03:12:33,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
-usedMemory,2018-11-06 03:12:33,MEMORY Total:16558 Usage:777 Free:14851 Used:4%,
-ping,2018-11-06 03:12:33,127.0.0.1,inactive
-ping,2018-11-06 03:12:33,192.168.1.1,inactive
-usedSpace,2018-11-06 03:12:33,Disk space 3%,OK
-checkProcess,2018-11-06 03:12:33,httpd is not running!,
-checkProcess,2018-11-06 03:12:33,openhab2 is not running!,
-checkProcess,2018-11-06 03:12:33,sshd is up an running!,
-usedMemory,2018-11-06 03:21:33,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
-usedMemory,2018-11-06 03:21:33,MEMORY Total:16558 Usage:778 Free:14850 Used:4%,
-ping,2018-11-06 03:21:33,127.0.0.1,inactive
-ping,2018-11-06 03:21:33,192.168.1.1,inactive
-usedSpace,2018-11-06 03:21:33,Disk space 3%,OK
-checkProcess,2018-11-06 03:21:33,httpd is not running!,
-checkProcess,2018-11-06 03:21:33,openhab2 is not running!,
-checkProcess,2018-11-06 03:21:33,sshd is up an running!,
-usedMemory,2018-11-06 09:20:18,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
-usedMemory,2018-11-06 09:20:18,MEMORY Total:16558 Usage:1147 Free:14268 Used:6%,
-ping,2018-11-06 09:20:18,127.0.0.1,inactive
-ping,2018-11-06 09:20:18,192.168.1.1,inactive
-usedSpace,2018-11-06 09:20:18,Disk space 3%,OK
-checkProcess,2018-11-06 09:20:18,httpd is not running!,
-checkProcess,2018-11-06 09:20:18,openhab2 is not running!,
-checkProcess,2018-11-06 09:20:18,sshd is up an running!,
-usedMemory,2018-11-06 09:47:53,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
-usedMemory,2018-11-06 09:47:53,MEMORY Total:16558 Usage:1180 Free:14211 Used:7%,
-ping,2018-11-06 09:47:53,127.0.0.1,inactive
-ping,2018-11-06 09:47:53,192.168.1.1,inactive
-usedSpace,2018-11-06 09:47:53,Disk space 3%,OK
-checkProcess,2018-11-06 09:47:53,httpd is not running!,
-checkProcess,2018-11-06 09:47:53,openhab2 is not running!,
-checkProcess,2018-11-06 09:47:53,sshd is up an running!,
+usedMemory,2018-11-07 23:29:45,SWAP Total:32424 Usage:0 Free:32424 Used:0%,
+usedMemory,2018-11-07 23:29:45,MEMORY Total:48217 Usage:1385 Free:44279 Used:2%,
+ping,2018-11-07 23:29:45,127.0.0.1,iactive
+ping,2018-11-07 23:29:45,192.168.1.1,iactive
+usedSpace,2018-11-07 23:29:45,Disk space 77%,WARNING
+checkProcess,2018-11-07 23:29:45,httpd,is not running!
+checkProcess,2018-11-07 23:29:45,openhab2,is not running!
+checkProcess,2018-11-07 23:29:45,sshd,is not running!
+usedMemory,2018-11-07 23:32:29,SWAP Total:32424 Usage:0 Free:32424 Used:0%,
+usedMemory,2018-11-07 23:32:29,MEMORY Total:48217 Usage:1374 Free:44288 Used:2%,
+ping,2018-11-07 23:32:29,127.0.0.1,iactive
+ping,2018-11-07 23:32:29,192.168.1.1,inactive
+usedSpace,2018-11-07 23:32:29,77%,WARNING
+checkProcess,2018-11-07 23:32:29,httpd,is not running!
+checkProcess,2018-11-07 23:32:29,openhab2,is not running!
+checkProcess,2018-11-07 23:32:29,sshd,is not running!

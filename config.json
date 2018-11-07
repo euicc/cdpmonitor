@@ -6,9 +6,15 @@
    "COMMON":{
 	   "NAME":"Common"
   },
-   "Memory Threshold":{
+   "MemoryThreshold":{
      "CRITICAL":"95",
      "MAJOR":"80",
+     "WARNING":"70"
+  },
+  "TESTS":["usedMemory","pingAllHosts","usedSpace","checkProcess"],
+  "DiskSpaceThreshold":{
+     "CRITICAL":"95",
+     "MAJOR":"85",
      "WARNING":"70"
   }
 }

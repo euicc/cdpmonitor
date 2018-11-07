@@ -37,10 +37,10 @@ def checkProcess():
  for i in processes:
   if i in output:
     print(i + " is up an running!")
-    logTestResult(testname,i + " is up an running!","")
+    logTestResult(testname,i,"is up an running!")
   else:
     print(i+ " is not running!")
-    logTestResult(testname,i + " is not running!","")
+    logTestResult(testname,i,"is not running!")
 
 def pingAllHosts():
   testname="ping"
@@ -51,37 +51,38 @@ def pingAllHosts():
             result=subprocess.Popen(["ping", "-c", "1", "-n", "-W", "2",    ip],stdout=f, stderr=f).wait()
             if result:
                 print(ip, "inactive")
-		state="inactive"
-		logTestResult(testname,ip,state)
+		logTestResult(testname,ip,"inactive")
             else:
                 print(ip, "active")
-		state="inactive"
-		logTestResult(testname,ip,state)
+		logTestResult(testname,ip,"iactive")
 
 def usedSpace():
-	used_space=os.popen("df -h / | grep -v Filesystem | awk '{print $5}'").readline().strip()
-	testname ="usedSpace"
-	if used_space < "85%":
-        	print "OK - %s of disk space used." % used_space
-		logTestResult(testname,"Disk space "+used_space,"OK");
-	elif used_space == "85%":
-        	print "WARNING - %s of disk space used." % used_space
-		logTestResult(testname,"Disk space "+used_space,"WARNING");
-	elif used_space > "85%":
-        	print "CRITICAL - %s of disk space used." % used_space
-		logTestResult(testname,"Disk space "+used_space,"CRITICAL");
-	else:
-        	print "UKNOWN - %s of disk space used." % used_space
-		logTestResult(testname,"Disk space "+used_space,"UKNOWN");
+    used_space=os.popen("df -h / | grep -v Filesystem | awk '{print $5}'").readline().strip()
+    testname ="usedSpace"
+    diskSpace_critic = settings.config['DiskSpaceThreshold']['CRITICAL']+"%"
+    diskSpace_major = settings.config['DiskSpaceThreshold']['MAJOR']+"%"
+    diskSpace_warning = settings.config['DiskSpaceThreshold']['WARNING']+"%"
+    if (used_space < diskSpace_warning):
+        print("OK - %s of disk space used." % used_space)
+        logTestResult(testname,used_space,"OK")
+    elif (used_space > diskSpace_warning and used_space < diskSpace_major):
+       	print("WARNING - %s of disk space used." % used_space)
+	logTestResult(testname,used_space,"WARNING")
+    elif (used_space > diskSpace_critic):
+       	print("CRITICAL - %s of disk space used." % used_space)
+	logTestResult(testname,used_space,"CRITICAL")
+    else:
+       	print("UKNOWN - %s of disk space used." % used_space)
+	logTestResult(testname,used_space,"UKNOWN")
 
 def usedMemory():
 	testname="usedMemory"
 	tot_m, used_m, free_m = map(int, os.popen('free -t -m').readlines()[-1].split()[1:])
 	swap_t, swap_u, swap_f = map(int, os.popen('free -t -m').readlines()[-2].split()[1:])
 
-	mem_critic = settings.config['Memory Threshold']['CRITICAL']
-	mem_major = settings.config['Memory Threshold']['MAJOR']
-	mem_warning = settings.config['Memory Threshold']['WARNING']
+	mem_critic = settings.config['MemoryThreshold']['CRITICAL']
+	mem_major = settings.config['MemoryThreshold']['MAJOR']
+	mem_warning = settings.config['MemoryThreshold']['WARNING']
 
 	if (swap_t !=0):
                 swap_percent = swap_u*100/swap_t
@@ -128,7 +129,7 @@ def usedMemory():
 		logTestResult(testname,"MEMORY Total:" + str(tot_m) + " Usage:" + str(used_m) + " Free:" + str(free_m) + " Used:" + str(mem_percent) + "%","")
 
 def logTestResult(testname,data,state):
-        with open(filename, 'a') as csvfile:
-                resultwriter = csv.writer(csvfile, delimiter=',')
-                resultwriter.writerow([testname,timestamp,data,state])
+    with open(filename, 'a') as csvfile:
+        resultwriter = csv.writer(csvfile, delimiter=',')
+        resultwriter.writerow([testname,timestamp,data,state])
 
