@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 usedMemory,2018-11-06 02:41:52,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
 usedMemory,2018-11-06 02:41:52,MEMORY Total:16558 Usage:765 Free:14864 Used:4%,
 ping,2018-11-06 02:41:52,127.0.0.1,inactive
@@ -46,3 +47,21 @@ usedSpace,2018-11-06 10:46:20,Disk space 3%,OK
 checkProcess,2018-11-06 10:46:20,httpd is not running!,
 checkProcess,2018-11-06 10:46:20,openhab2 is not running!,
 checkProcess,2018-11-06 10:46:20,sshd is up an running!,
+=======
+usedMemory,2018-11-07 23:29:45,SWAP Total:32424 Usage:0 Free:32424 Used:0%,
+usedMemory,2018-11-07 23:29:45,MEMORY Total:48217 Usage:1385 Free:44279 Used:2%,
+ping,2018-11-07 23:29:45,127.0.0.1,iactive
+ping,2018-11-07 23:29:45,192.168.1.1,iactive
+usedSpace,2018-11-07 23:29:45,Disk space 77%,WARNING
+checkProcess,2018-11-07 23:29:45,httpd,is not running!
+checkProcess,2018-11-07 23:29:45,openhab2,is not running!
+checkProcess,2018-11-07 23:29:45,sshd,is not running!
+usedMemory,2018-11-07 23:32:29,SWAP Total:32424 Usage:0 Free:32424 Used:0%,
+usedMemory,2018-11-07 23:32:29,MEMORY Total:48217 Usage:1374 Free:44288 Used:2%,
+ping,2018-11-07 23:32:29,127.0.0.1,iactive
+ping,2018-11-07 23:32:29,192.168.1.1,inactive
+usedSpace,2018-11-07 23:32:29,77%,WARNING
+checkProcess,2018-11-07 23:32:29,httpd,is not running!
+checkProcess,2018-11-07 23:32:29,openhab2,is not running!
+checkProcess,2018-11-07 23:32:29,sshd,is not running!
+>>>>>>> f2e0dd4fdf4545b047c899c240afe3c0ea010820
