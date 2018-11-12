@@ -191,3 +191,12 @@ usedSpace,2018-11-12 06:36:03,3%,OK
 checkProcess,2018-11-12 06:36:03,httpd,is not running!
 checkProcess,2018-11-12 06:36:03,openhab2,is not running!
 checkProcess,2018-11-12 06:36:03,sshd,is up an running!
+usedMemory,2018-11-12 06:51:19,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 06:51:19,MEMORY Total:16558 Usage:1334 Free:13998 Used:8%,
+cpuUsage,2018-11-12 06:51:19,"{'cpu2': 1.01, 'cpu': 2.01, 'cpu0': 1.01, 'cpu1': 3.0}",OK
+ping,2018-11-12 06:51:19,127.0.0.1,iactive
+ping,2018-11-12 06:51:19,192.168.1.1,inactive
+usedSpace,2018-11-12 06:51:19,3%,OK
+checkProcess,2018-11-12 06:51:19,httpd,is not running!
+checkProcess,2018-11-12 06:51:19,openhab2,is not running!
+checkProcess,2018-11-12 06:51:19,sshd,is up an running!
