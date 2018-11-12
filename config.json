@@ -11,8 +11,13 @@
      "MAJOR":"80",
      "WARNING":"70"
   },
-  "TESTS":["usedMemory","pingAllHosts","usedSpace","checkProcess"],
+  "TESTS":["usedMemory","cpuUsage","pingAllHosts","usedSpace","checkProcess"],
   "DiskSpaceThreshold":{
+     "CRITICAL":"95",
+     "MAJOR":"85",
+     "WARNING":"70"
+  },
+  "CpuThreshold":{
      "CRITICAL":"95",
      "MAJOR":"85",
      "WARNING":"70"

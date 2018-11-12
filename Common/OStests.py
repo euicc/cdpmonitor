@@ -2,6 +2,7 @@ import subprocess
 import os
 import csv
 import time
+from time import sleep
 import datetime
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -132,4 +133,76 @@ def logTestResult(testname,data,state):
     with open(filename, 'a') as csvfile:
         resultwriter = csv.writer(csvfile, delimiter=',')
         resultwriter.writerow([testname,timestamp,data,state])
+
+
+class GetCpuLoad(object):
+    def __init__(self, percentage=True, sleeptime = 1):
+        self.percentage = percentage
+        self.cpustat = '/proc/stat'
+        self.sep = ' ' 
+        self.sleeptime = sleeptime
+
+    def getcputime(self):
+        cpu_infos = {} 
+        with open(self.cpustat,'r') as f_stat:
+            lines = [line.split(self.sep) for content in f_stat.readlines() for line in content.split('\n') if line.startswith('cpu')]
+
+            for cpu_line in lines:
+                if '' in cpu_line: cpu_line.remove('')#remove empty elements
+                cpu_line = [cpu_line[0]]+[float(i) for i in cpu_line[1:]]#type casting
+                cpu_id,user,nice,system,idle,iowait,irq,softrig,steal,guest,guest_nice = cpu_line
+
+                Idle=idle+iowait
+                NonIdle=user+nice+system+irq+softrig+steal
+
+                Total=Idle+NonIdle
+                cpu_infos.update({cpu_id:{'total':Total,'idle':Idle}})
+            return cpu_infos
+
+    def getcpuload(self):
+        start = self.getcputime()
+        sleep(self.sleeptime)
+        stop = self.getcputime()
+
+        cpu_load = {}
+
+        for cpu in start:
+            Total = stop[cpu]['total']
+            PrevTotal = start[cpu]['total']
+
+            Idle = stop[cpu]['idle']
+            PrevIdle = start[cpu]['idle']
+            CPU_Percentage=((Total-PrevTotal)-(Idle-PrevIdle))/(Total-PrevTotal)*100
+            cpu_load.update({cpu: round(CPU_Percentage,2)})
+        return cpu_load
+
+
+def cpuUsage():
+    x = GetCpuLoad()
+    cpu_info = x.getcpuload()
+    usage = cpu_info['cpu']
+    testname="cpuUsage"
+
+    cpuUsage_critic = settings.config['CpuThreshold']['CRITICAL']
+    cpuUsage_major = settings.config['CpuThreshold']['MAJOR']
+    cpuUsage_warning = settings.config['CpuThreshold']['WARNING']
+
+    if usage < int(cpuUsage_warning):
+	print colored("--- CPU USAGE OK --- ",'green')
+	print cpu_info
+        logTestResult(testname,cpu_info,"OK")
+    elif usage >= int(cpuUsage_warning) and usage < int(cpuUsage_major):
+	print colored("--- CPU USAGE NOK --- ",'yellow')
+        print cpu_info
+        logTestResult(testname,cpu_info,"WARNING")
+    elif usage >= int(cpuUsage_major) and usage < int(cpuUsage_critic):
+        print colored("--- CPU USAGE NOK --- ",'magenta')
+        print cpu_info
+        logTestResult(testname,cpu_info,"MAJOR")
+    elif usage >= int(cpuUsage_critic):
+        print colored("--- CPU USAGE NOK --- ",'red')
+        print cpu_info
+        logTestResult(testname,cpu_info,"CRITIC")
+
+
 
