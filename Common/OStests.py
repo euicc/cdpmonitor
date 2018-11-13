@@ -59,19 +59,19 @@ def pingAllHosts():
 
 def usedSpace():
     testname ="usedSpace"
-    diskSpace_critic = settings.config['DiskSpaceThreshold']['CRITICAL']+"%"
-    diskSpace_major = settings.config['DiskSpaceThreshold']['MAJOR']+"%"
-    diskSpace_warning = settings.config['DiskSpaceThreshold']['WARNING']+"%"
+    diskSpace_critic = settings.config['DiskSpaceThreshold']['CRITICAL']
+    diskSpace_major = settings.config['DiskSpaceThreshold']['MAJOR']
+    diskSpace_warning = settings.config['DiskSpaceThreshold']['WARNING']
     partitions= os.popen("df -h | grep -v Filesystem | awk '{print $1}'").readlines()
     for partition in partitions:
 	command ="df -h " + partition.strip('\n') + " | grep -v Filesystem | awk '{print $5}'"
-	used_space = os.popen(command).readline().strip('\n')
-	#print (used_space)
+	used_space = os.popen(command).readline().strip('%\n')
+	print (used_space)
     	if (used_space <= diskSpace_warning):
-        	print (partition.strip('\n') + " OK - %s of disk space used." % used_space)
+        	print (partition.strip('\n') + " OK " + used_space + "% of disk space used.")
         	logTestResult(testname,used_space,"OK")
     	elif (used_space > diskSpace_warning and used_space <= diskSpace_critic):
-       		print(partition.strip('\n') + " WARNING - %s of disk space used." % used_space)
+       		print(partition.strip('\n') + " WARNING - " + used_space +"% of disk space used.")
 		logTestResult(testname,used_space,"WARNING")
     	elif (used_space > diskSpace_critic):
        		print colored(partition.strip('\n') + " CRITICAL - %s of disk space used." % used_space,'red')
