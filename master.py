@@ -3,6 +3,7 @@ from modules.termcolor.termcolor import colored
 import json
 import settings
 from Common import OStests
+from  modules import psutil
 
 #with open('config.json', 'r') as f:
 #    config = json.load(f)
@@ -36,3 +37,7 @@ for files in os.listdir(customTestsDir):
 
 for result in results:
 		os.system('python ' + customTestsDir + "/"  + result)
+
+
+
+print (psutil.cpu_count())
