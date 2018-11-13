@@ -200,3 +200,558 @@ usedSpace,2018-11-12 06:51:19,3%,OK
 checkProcess,2018-11-12 06:51:19,httpd,is not running!
 checkProcess,2018-11-12 06:51:19,openhab2,is not running!
 checkProcess,2018-11-12 06:51:19,sshd,is up an running!
+usedMemory,2018-11-12 07:23:46,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 07:23:46,MEMORY Total:16558 Usage:1429 Free:13835 Used:8%,
+cpuUsage,2018-11-12 07:23:46,"{'cpu2': 3.96, 'cpu': 3.33, 'cpu0': 4.04, 'cpu1': 2.0}",OK
+ping,2018-11-12 07:23:46,127.0.0.1,iactive
+ping,2018-11-12 07:23:46,192.168.1.1,inactive
+usedSpace,2018-11-12 07:23:46,3%,OK
+checkProcess,2018-11-12 07:23:46,httpd,is not running!
+checkProcess,2018-11-12 07:23:46,openhab2,is not running!
+checkProcess,2018-11-12 07:23:46,sshd,is up an running!
+usedMemory,2018-11-12 07:33:56,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 07:33:56,MEMORY Total:16558 Usage:1461 Free:13792 Used:8%,
+cpuUsage,2018-11-12 07:33:56,"{'cpu2': 9.09, 'cpu': 10.88, 'cpu0': 5.15, 'cpu1': 18.75}",OK
+ping,2018-11-12 07:33:56,127.0.0.1,iactive
+ping,2018-11-12 07:33:56,192.168.1.1,inactive
+usedSpace,2018-11-12 07:33:56,0%,OK
+checkProcess,2018-11-12 07:33:56,httpd,is not running!
+checkProcess,2018-11-12 07:33:56,openhab2,is not running!
+checkProcess,2018-11-12 07:33:56,sshd,is up an running!
+usedMemory,2018-11-12 07:34:53,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 07:34:53,MEMORY Total:16558 Usage:1471 Free:13783 Used:8%,
+cpuUsage,2018-11-12 07:34:53,"{'cpu2': 8.16, 'cpu': 10.69, 'cpu0': 9.28, 'cpu1': 16.67}",OK
+ping,2018-11-12 07:34:53,127.0.0.1,iactive
+ping,2018-11-12 07:34:53,192.168.1.1,inactive
+usedSpace,2018-11-12 07:34:53,"<open file ""df -h | grep -v Filesystem | awk '{print $1}'"", mode 'r' at 0x7f28929d9300>",OK
+checkProcess,2018-11-12 07:34:53,httpd,is not running!
+checkProcess,2018-11-12 07:34:53,openhab2,is not running!
+checkProcess,2018-11-12 07:34:53,sshd,is up an running!
+usedMemory,2018-11-12 07:49:10,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 07:49:10,MEMORY Total:16558 Usage:1219 Free:14056 Used:7%,
+cpuUsage,2018-11-12 07:49:10,"{'cpu2': 0.0, 'cpu': 1.67, 'cpu0': 1.01, 'cpu1': 3.0}",OK
+ping,2018-11-12 07:49:10,127.0.0.1,iactive
+ping,2018-11-12 07:49:10,192.168.1.1,inactive
+usedSpace,2018-11-12 07:49:10,"Filesystem      Size  Used Avail Use% Mounted on
+",CRITICAL
+checkProcess,2018-11-12 07:49:10,httpd,is not running!
+checkProcess,2018-11-12 07:49:10,openhab2,is not running!
+checkProcess,2018-11-12 07:49:10,sshd,is up an running!
+usedMemory,2018-11-12 07:50:16,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 07:50:16,MEMORY Total:16558 Usage:1217 Free:14058 Used:7%,
+cpuUsage,2018-11-12 07:50:16,"{'cpu2': 2.04, 'cpu': 2.35, 'cpu0': 0.0, 'cpu1': 4.0}",OK
+ping,2018-11-12 07:50:16,127.0.0.1,iactive
+ping,2018-11-12 07:50:16,192.168.1.1,inactive
+usedSpace,2018-11-12 07:50:16,"Filesystem      Size  Used Avail Use% Mounted on
+",CRITICAL
+checkProcess,2018-11-12 07:50:16,httpd,is not running!
+checkProcess,2018-11-12 07:50:16,openhab2,is not running!
+checkProcess,2018-11-12 07:50:16,sshd,is up an running!
+usedMemory,2018-11-12 07:56:20,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 07:56:20,MEMORY Total:16558 Usage:1242 Free:13951 Used:7%,
+cpuUsage,2018-11-12 07:56:20,"{'cpu2': 3.03, 'cpu': 2.36, 'cpu0': 0.0, 'cpu1': 5.0}",OK
+ping,2018-11-12 07:56:20,127.0.0.1,iactive
+ping,2018-11-12 07:56:20,192.168.1.1,inactive
+usedSpace,2018-11-12 07:56:20,"Filesystem      Size  Used Avail Use% Mounted on
+",CRITICAL
+checkProcess,2018-11-12 07:56:20,httpd,is not running!
+checkProcess,2018-11-12 07:56:20,openhab2,is not running!
+checkProcess,2018-11-12 07:56:20,sshd,is up an running!
+usedMemory,2018-11-12 07:56:54,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 07:56:54,MEMORY Total:16558 Usage:1245 Free:13942 Used:7%,
+cpuUsage,2018-11-12 07:56:54,"{'cpu2': 7.92, 'cpu': 7.36, 'cpu0': 5.94, 'cpu1': 10.1}",OK
+ping,2018-11-12 07:56:54,127.0.0.1,iactive
+ping,2018-11-12 07:56:54,192.168.1.1,inactive
+usedSpace,2018-11-12 07:56:54,"udev0%
+",CRITICAL
+checkProcess,2018-11-12 07:56:54,httpd,is not running!
+checkProcess,2018-11-12 07:56:54,openhab2,is not running!
+checkProcess,2018-11-12 07:56:54,sshd,is up an running!
+usedMemory,2018-11-12 07:57:21,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 07:57:21,MEMORY Total:16558 Usage:1245 Free:13941 Used:7%,
+cpuUsage,2018-11-12 07:57:21,"{'cpu2': 4.0, 'cpu': 5.41, 'cpu0': 5.1, 'cpu1': 7.14}",OK
+ping,2018-11-12 07:57:21,127.0.0.1,iactive
+ping,2018-11-12 07:57:21,192.168.1.1,inactive
+usedSpace,2018-11-12 07:57:21,"['udev0%\n', 'tmpfs1%\n', '/dev/sda13%\n', 'tmpfs1%\n', 'tmpfs1%\n', 'tmpfs0%\n', '/dev/loop0100%\n', '/dev/loop1100%\n', '/dev/loop3100%\n', '/dev/loop5100%\n', '/dev/loop4100%\n', '/dev/loop6100%\n', '/dev/loop7100%\n', '/dev/loop10100%\n', '/dev/loop9100%\n', '/dev/loop8100%\n', '/dev/loop11100%\n', '/dev/loop2100%\n', '/dev/sda28%\n', '/dev/sda41%\n', 'Shared99%\n', 'tmpfs1%\n', '/dev/sr0100%\n']",OK
+checkProcess,2018-11-12 07:57:21,httpd,is not running!
+checkProcess,2018-11-12 07:57:21,openhab2,is not running!
+checkProcess,2018-11-12 07:57:21,sshd,is up an running!
+usedMemory,2018-11-12 07:58:02,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 07:58:02,MEMORY Total:16558 Usage:1245 Free:13941 Used:7%,
+cpuUsage,2018-11-12 07:58:02,"{'cpu2': 7.07, 'cpu': 7.72, 'cpu0': 7.07, 'cpu1': 9.0}",OK
+ping,2018-11-12 07:58:02,127.0.0.1,iactive
+ping,2018-11-12 07:58:02,192.168.1.1,inactive
+usedSpace,2018-11-12 07:58:02,"['udev0%\n', 'tmpfs1%\n', '/dev/sda13%\n', 'tmpfs1%\n', 'tmpfs1%\n', 'tmpfs0%\n', '/dev/loop0100%\n', '/dev/loop1100%\n', '/dev/loop3100%\n', '/dev/loop5100%\n', '/dev/loop4100%\n', '/dev/loop6100%\n', '/dev/loop7100%\n', '/dev/loop10100%\n', '/dev/loop9100%\n', '/dev/loop8100%\n', '/dev/loop11100%\n', '/dev/loop2100%\n', '/dev/sda28%\n', '/dev/sda41%\n', 'Shared99%\n', 'tmpfs1%\n', '/dev/sr0100%\n']",OK
+checkProcess,2018-11-12 07:58:02,httpd,is not running!
+checkProcess,2018-11-12 07:58:02,openhab2,is not running!
+checkProcess,2018-11-12 07:58:02,sshd,is up an running!
+usedMemory,2018-11-12 08:02:00,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 08:02:00,MEMORY Total:16558 Usage:1269 Free:13863 Used:7%,
+cpuUsage,2018-11-12 08:02:00,"{'cpu2': 6.06, 'cpu': 9.7, 'cpu0': 10.1, 'cpu1': 12.12}",OK
+ping,2018-11-12 08:02:00,127.0.0.1,iactive
+ping,2018-11-12 08:02:00,192.168.1.1,inactive
+usedMemory,2018-11-12 08:03:10,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 08:03:10,MEMORY Total:16558 Usage:1269 Free:13863 Used:7%,
+cpuUsage,2018-11-12 08:03:10,"{'cpu2': 3.03, 'cpu': 7.72, 'cpu0': 9.18, 'cpu1': 10.0}",OK
+ping,2018-11-12 08:03:10,127.0.0.1,iactive
+ping,2018-11-12 08:03:10,192.168.1.1,inactive
+usedMemory,2018-11-12 08:05:25,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 08:05:25,MEMORY Total:16558 Usage:1280 Free:13849 Used:7%,
+cpuUsage,2018-11-12 08:05:25,"{'cpu2': 0.0, 'cpu': 2.36, 'cpu0': 4.04, 'cpu1': 3.06}",OK
+ping,2018-11-12 08:05:25,127.0.0.1,iactive
+ping,2018-11-12 08:05:25,192.168.1.1,inactive
+usedMemory,2018-11-12 08:07:09,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 08:07:09,MEMORY Total:16558 Usage:1282 Free:13846 Used:7%,
+cpuUsage,2018-11-12 08:07:09,"{'cpu2': 1.02, 'cpu': 2.68, 'cpu0': 3.0, 'cpu1': 2.97}",OK
+ping,2018-11-12 08:07:09,127.0.0.1,iactive
+ping,2018-11-12 08:07:09,192.168.1.1,inactive
+usedMemory,2018-11-12 08:07:33,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 08:07:33,MEMORY Total:16558 Usage:1283 Free:13845 Used:7%,
+cpuUsage,2018-11-12 08:07:33,"{'cpu2': 4.0, 'cpu': 2.36, 'cpu0': 0.0, 'cpu1': 4.04}",OK
+ping,2018-11-12 08:07:33,127.0.0.1,iactive
+ping,2018-11-12 08:07:33,192.168.1.1,inactive
+usedMemory,2018-11-12 08:08:21,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 08:08:21,MEMORY Total:16558 Usage:1283 Free:13845 Used:7%,
+cpuUsage,2018-11-12 08:08:21,"{'cpu2': 1.01, 'cpu': 2.01, 'cpu0': 1.0, 'cpu1': 5.0}",OK
+ping,2018-11-12 08:08:21,127.0.0.1,iactive
+ping,2018-11-12 08:08:21,192.168.1.1,inactive
+usedMemory,2018-11-12 08:09:15,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 08:09:15,MEMORY Total:16558 Usage:1283 Free:13845 Used:7%,
+cpuUsage,2018-11-12 08:09:15,"{'cpu2': 2.02, 'cpu': 2.06, 'cpu0': 0.0, 'cpu1': 6.19}",OK
+ping,2018-11-12 08:09:15,127.0.0.1,iactive
+ping,2018-11-12 08:09:15,192.168.1.1,inactive
+usedMemory,2018-11-12 08:09:33,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 08:09:33,MEMORY Total:16558 Usage:1284 Free:13845 Used:7%,
+cpuUsage,2018-11-12 08:09:33,"{'cpu2': 1.0, 'cpu': 2.33, 'cpu0': 1.02, 'cpu1': 4.0}",OK
+ping,2018-11-12 08:09:33,127.0.0.1,iactive
+usedMemory,2018-11-12 08:11:11,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 08:11:11,MEMORY Total:16558 Usage:1284 Free:13844 Used:7%,
+cpuUsage,2018-11-12 08:11:11,"{'cpu2': 3.0, 'cpu': 2.01, 'cpu0': 1.01, 'cpu1': 2.02}",OK
+ping,2018-11-12 08:11:11,127.0.0.1,iactive
+ping,2018-11-12 08:11:11,192.168.1.1,inactive
+usedSpace,2018-11-12 08:11:11,,OK
+usedSpace,2018-11-12 08:11:11,,OK
+usedSpace,2018-11-12 08:11:11,3%,OK
+usedSpace,2018-11-12 08:11:11,,OK
+usedSpace,2018-11-12 08:11:11,,OK
+usedSpace,2018-11-12 08:11:11,,OK
+usedSpace,2018-11-12 08:11:11,100%,OK
+usedSpace,2018-11-12 08:11:11,100%,OK
+usedSpace,2018-11-12 08:11:11,100%,OK
+usedSpace,2018-11-12 08:11:11,100%,OK
+usedSpace,2018-11-12 08:11:11,100%,OK
+usedSpace,2018-11-12 08:11:11,100%,OK
+usedSpace,2018-11-12 08:11:11,100%,OK
+usedSpace,2018-11-12 08:11:11,100%,OK
+usedSpace,2018-11-12 08:11:11,100%,OK
+usedSpace,2018-11-12 08:11:11,100%,OK
+usedSpace,2018-11-12 08:11:11,100%,OK
+usedSpace,2018-11-12 08:11:11,100%,OK
+usedSpace,2018-11-12 08:11:11,8%,WARNING
+usedSpace,2018-11-12 08:11:11,1%,OK
+usedSpace,2018-11-12 08:11:11,,OK
+usedSpace,2018-11-12 08:11:11,,OK
+usedSpace,2018-11-12 08:11:11,100%,OK
+checkProcess,2018-11-12 08:11:11,httpd,is not running!
+checkProcess,2018-11-12 08:11:11,openhab2,is not running!
+checkProcess,2018-11-12 08:11:11,sshd,is up an running!
+usedMemory,2018-11-12 08:12:40,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 08:12:40,MEMORY Total:16558 Usage:1284 Free:13844 Used:7%,
+cpuUsage,2018-11-12 08:12:40,"{'cpu2': 2.02, 'cpu': 2.36, 'cpu0': 0.0, 'cpu1': 5.0}",OK
+ping,2018-11-12 08:12:40,127.0.0.1,iactive
+ping,2018-11-12 08:12:40,192.168.1.1,inactive
+usedSpace,2018-11-12 08:12:40,,OK
+usedSpace,2018-11-12 08:12:40,,OK
+usedSpace,2018-11-12 08:12:40,3%,OK
+usedSpace,2018-11-12 08:12:40,,OK
+usedSpace,2018-11-12 08:12:40,,OK
+usedSpace,2018-11-12 08:12:40,,OK
+usedSpace,2018-11-12 08:12:40,100%,OK
+usedSpace,2018-11-12 08:12:40,100%,OK
+usedSpace,2018-11-12 08:12:40,100%,OK
+usedSpace,2018-11-12 08:12:40,100%,OK
+usedSpace,2018-11-12 08:12:40,100%,OK
+usedSpace,2018-11-12 08:12:40,100%,OK
+usedSpace,2018-11-12 08:12:40,100%,OK
+usedSpace,2018-11-12 08:12:40,100%,OK
+usedSpace,2018-11-12 08:12:40,100%,OK
+usedSpace,2018-11-12 08:12:40,100%,OK
+usedSpace,2018-11-12 08:12:40,100%,OK
+usedSpace,2018-11-12 08:12:40,100%,OK
+usedSpace,2018-11-12 08:12:40,8%,WARNING
+usedSpace,2018-11-12 08:12:40,1%,OK
+usedSpace,2018-11-12 08:12:40,,OK
+usedSpace,2018-11-12 08:12:40,,OK
+usedSpace,2018-11-12 08:12:40,100%,OK
+checkProcess,2018-11-12 08:12:40,httpd,is not running!
+checkProcess,2018-11-12 08:12:40,openhab2,is not running!
+checkProcess,2018-11-12 08:12:40,sshd,is up an running!
+usedMemory,2018-11-12 08:14:20,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 08:14:20,MEMORY Total:16558 Usage:1266 Free:13862 Used:7%,
+cpuUsage,2018-11-12 08:14:20,"{'cpu2': 7.0, 'cpu': 5.39, 'cpu0': 5.0, 'cpu1': 5.1}",OK
+ping,2018-11-12 08:14:20,127.0.0.1,iactive
+ping,2018-11-12 08:14:20,192.168.1.1,inactive
+usedSpace,2018-11-12 08:14:20,,OK
+usedSpace,2018-11-12 08:14:20,,OK
+usedSpace,2018-11-12 08:14:20,3%,OK
+usedSpace,2018-11-12 08:14:20,,OK
+usedSpace,2018-11-12 08:14:20,,OK
+usedSpace,2018-11-12 08:14:20,,OK
+usedSpace,2018-11-12 08:14:20,100%,OK
+usedSpace,2018-11-12 08:14:20,100%,OK
+usedSpace,2018-11-12 08:14:20,100%,OK
+usedSpace,2018-11-12 08:14:20,100%,OK
+usedSpace,2018-11-12 08:14:20,100%,OK
+usedSpace,2018-11-12 08:14:20,100%,OK
+usedSpace,2018-11-12 08:14:20,100%,OK
+usedSpace,2018-11-12 08:14:20,100%,OK
+usedSpace,2018-11-12 08:14:20,100%,OK
+usedSpace,2018-11-12 08:14:20,100%,OK
+usedSpace,2018-11-12 08:14:20,100%,OK
+usedSpace,2018-11-12 08:14:20,100%,OK
+usedSpace,2018-11-12 08:14:20,8%,WARNING
+usedSpace,2018-11-12 08:14:20,1%,OK
+usedSpace,2018-11-12 08:14:20,,OK
+usedSpace,2018-11-12 08:14:20,,OK
+usedSpace,2018-11-12 08:14:20,100%,OK
+checkProcess,2018-11-12 08:14:20,httpd,is not running!
+checkProcess,2018-11-12 08:14:20,openhab2,is not running!
+checkProcess,2018-11-12 08:14:20,sshd,is up an running!
+usedMemory,2018-11-12 08:17:29,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 08:17:29,MEMORY Total:16558 Usage:1270 Free:13857 Used:7%,
+cpuUsage,2018-11-12 08:17:29,"{'cpu2': 1.0, 'cpu': 2.02, 'cpu0': 3.0, 'cpu1': 1.02}",OK
+ping,2018-11-12 08:17:29,127.0.0.1,iactive
+ping,2018-11-12 08:17:29,192.168.1.1,inactive
+usedSpace,2018-11-12 08:17:29,,OK
+usedSpace,2018-11-12 08:17:29,,OK
+usedSpace,2018-11-12 08:17:29,3%,OK
+usedSpace,2018-11-12 08:17:29,,OK
+usedSpace,2018-11-12 08:17:29,,OK
+usedSpace,2018-11-12 08:17:29,,OK
+usedSpace,2018-11-12 08:17:29,100%,OK
+usedSpace,2018-11-12 08:17:29,100%,OK
+usedSpace,2018-11-12 08:17:29,100%,OK
+usedSpace,2018-11-12 08:17:29,100%,OK
+usedSpace,2018-11-12 08:17:29,100%,OK
+usedSpace,2018-11-12 08:17:29,100%,OK
+usedSpace,2018-11-12 08:17:29,100%,OK
+usedSpace,2018-11-12 08:17:29,100%,OK
+usedSpace,2018-11-12 08:17:29,100%,OK
+usedSpace,2018-11-12 08:17:29,100%,OK
+usedSpace,2018-11-12 08:17:29,100%,OK
+usedSpace,2018-11-12 08:17:29,100%,OK
+usedSpace,2018-11-12 08:17:29,8%,WARNING
+usedSpace,2018-11-12 08:17:29,1%,OK
+usedSpace,2018-11-12 08:17:29,,OK
+usedSpace,2018-11-12 08:17:29,,OK
+usedSpace,2018-11-12 08:17:29,100%,OK
+checkProcess,2018-11-12 08:17:29,httpd,is not running!
+checkProcess,2018-11-12 08:17:29,openhab2,is not running!
+checkProcess,2018-11-12 08:17:29,sshd,is up an running!
+usedMemory,2018-11-12 08:40:33,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-12 08:40:33,MEMORY Total:16558 Usage:1297 Free:13802 Used:7%,
+cpuUsage,2018-11-12 08:40:33,"{'cpu2': 1.0, 'cpu': 2.02, 'cpu0': 2.04, 'cpu1': 3.03}",OK
+ping,2018-11-12 08:40:33,127.0.0.1,iactive
+ping,2018-11-12 08:40:33,192.168.1.1,inactive
+usedSpace,2018-11-12 08:40:33,,OK
+usedSpace,2018-11-12 08:40:33,,OK
+usedSpace,2018-11-12 08:40:33,3%,OK
+usedSpace,2018-11-12 08:40:33,,OK
+usedSpace,2018-11-12 08:40:33,,OK
+usedSpace,2018-11-12 08:40:33,,OK
+usedSpace,2018-11-12 08:40:33,100%,OK
+usedSpace,2018-11-12 08:40:33,100%,OK
+usedSpace,2018-11-12 08:40:33,100%,OK
+usedSpace,2018-11-12 08:40:33,100%,OK
+usedSpace,2018-11-12 08:40:33,100%,OK
+usedSpace,2018-11-12 08:40:33,100%,OK
+usedSpace,2018-11-12 08:40:33,100%,OK
+usedSpace,2018-11-12 08:40:33,100%,OK
+usedSpace,2018-11-12 08:40:33,100%,OK
+usedSpace,2018-11-12 08:40:33,100%,OK
+usedSpace,2018-11-12 08:40:33,100%,OK
+usedSpace,2018-11-12 08:40:33,100%,OK
+usedSpace,2018-11-12 08:40:33,8%,WARNING
+usedSpace,2018-11-12 08:40:33,1%,OK
+usedSpace,2018-11-12 08:40:33,,OK
+usedSpace,2018-11-12 08:40:33,,OK
+usedSpace,2018-11-12 08:40:33,100%,OK
+checkProcess,2018-11-12 08:40:33,httpd,is not running!
+checkProcess,2018-11-12 08:40:33,openhab2,is not running!
+checkProcess,2018-11-12 08:40:33,sshd,is up an running!
+usedMemory,2018-11-13 03:08:10,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-13 03:08:10,MEMORY Total:16558 Usage:766 Free:15194 Used:4%,
+cpuUsage,2018-11-13 03:08:10,"{'cpu2': 1.98, 'cpu': 1.34, 'cpu0': 0.0, 'cpu1': 2.0}",OK
+ping,2018-11-13 03:08:10,127.0.0.1,iactive
+ping,2018-11-13 03:08:10,192.168.1.1,iactive
+usedSpace,2018-11-13 03:08:10,,OK
+usedSpace,2018-11-13 03:08:10,,OK
+usedSpace,2018-11-13 03:08:10,3%,OK
+usedSpace,2018-11-13 03:08:10,,OK
+usedSpace,2018-11-13 03:08:10,,OK
+usedSpace,2018-11-13 03:08:10,,OK
+usedSpace,2018-11-13 03:08:10,100%,OK
+usedSpace,2018-11-13 03:08:10,100%,OK
+usedSpace,2018-11-13 03:08:10,100%,OK
+usedSpace,2018-11-13 03:08:10,100%,OK
+usedSpace,2018-11-13 03:08:10,100%,OK
+usedSpace,2018-11-13 03:08:10,100%,OK
+usedSpace,2018-11-13 03:08:10,100%,OK
+usedSpace,2018-11-13 03:08:10,100%,OK
+usedSpace,2018-11-13 03:08:10,100%,OK
+usedSpace,2018-11-13 03:08:10,100%,OK
+usedSpace,2018-11-13 03:08:10,100%,OK
+usedSpace,2018-11-13 03:08:10,100%,OK
+usedSpace,2018-11-13 03:08:10,8%,WARNING
+usedSpace,2018-11-13 03:08:10,1%,OK
+usedSpace,2018-11-13 03:08:10,,OK
+usedSpace,2018-11-13 03:08:10,,OK
+usedSpace,2018-11-13 03:08:10,100%,OK
+checkProcess,2018-11-13 03:08:10,httpd,is not running!
+checkProcess,2018-11-13 03:08:10,openhab2,is not running!
+checkProcess,2018-11-13 03:08:10,sshd,is up an running!
+usedMemory,2018-11-13 03:12:26,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-13 03:12:26,MEMORY Total:16558 Usage:778 Free:15174 Used:4%,
+cpuUsage,2018-11-13 03:12:26,"{'cpu2': 3.96, 'cpu': 4.05, 'cpu0': 6.0, 'cpu1': 4.08}",OK
+ping,2018-11-13 03:12:26,127.0.0.1,iactive
+ping,2018-11-13 03:12:26,192.168.1.1,iactive
+usedSpace,2018-11-13 03:12:26,,OK
+usedSpace,2018-11-13 03:12:26,,OK
+usedSpace,2018-11-13 03:12:26,3%,OK
+usedSpace,2018-11-13 03:12:26,,OK
+usedSpace,2018-11-13 03:12:26,,OK
+usedSpace,2018-11-13 03:12:26,,OK
+usedSpace,2018-11-13 03:12:26,100%,OK
+usedSpace,2018-11-13 03:12:26,100%,OK
+usedSpace,2018-11-13 03:12:26,100%,OK
+usedSpace,2018-11-13 03:12:26,100%,OK
+usedSpace,2018-11-13 03:12:26,100%,OK
+usedSpace,2018-11-13 03:12:26,100%,OK
+usedSpace,2018-11-13 03:12:26,100%,OK
+usedSpace,2018-11-13 03:12:26,100%,OK
+usedSpace,2018-11-13 03:12:26,100%,OK
+usedSpace,2018-11-13 03:12:26,100%,OK
+usedSpace,2018-11-13 03:12:26,100%,OK
+usedSpace,2018-11-13 03:12:26,100%,OK
+usedSpace,2018-11-13 03:12:26,8%,WARNING
+usedSpace,2018-11-13 03:12:26,1%,OK
+usedSpace,2018-11-13 03:12:26,,OK
+usedSpace,2018-11-13 03:12:26,,OK
+usedSpace,2018-11-13 03:12:26,100%,OK
+checkProcess,2018-11-13 03:12:26,httpd,is not running!
+checkProcess,2018-11-13 03:12:26,openhab2,is not running!
+checkProcess,2018-11-13 03:12:26,sshd,is up an running!
+usedMemory,2018-11-13 03:13:13,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-13 03:13:13,MEMORY Total:16558 Usage:777 Free:15175 Used:4%,
+cpuUsage,2018-11-13 03:13:13,"{'cpu2': 4.0, 'cpu': 4.35, 'cpu0': 5.05, 'cpu1': 3.06}",OK
+ping,2018-11-13 03:13:13,127.0.0.1,iactive
+ping,2018-11-13 03:13:13,192.168.1.1,iactive
+usedSpace,2018-11-13 03:13:13,,OK
+usedSpace,2018-11-13 03:13:13,,OK
+usedSpace,2018-11-13 03:13:13,3%,OK
+usedSpace,2018-11-13 03:13:13,,OK
+usedSpace,2018-11-13 03:13:13,,OK
+usedSpace,2018-11-13 03:13:13,,OK
+usedSpace,2018-11-13 03:13:13,100%,OK
+usedSpace,2018-11-13 03:13:13,100%,OK
+usedSpace,2018-11-13 03:13:13,100%,OK
+usedSpace,2018-11-13 03:13:13,100%,OK
+usedSpace,2018-11-13 03:13:13,100%,OK
+usedSpace,2018-11-13 03:13:13,100%,OK
+usedSpace,2018-11-13 03:13:13,100%,OK
+usedSpace,2018-11-13 03:13:13,100%,OK
+usedSpace,2018-11-13 03:13:13,100%,OK
+usedSpace,2018-11-13 03:13:13,100%,OK
+usedSpace,2018-11-13 03:13:13,100%,OK
+usedSpace,2018-11-13 03:13:13,100%,OK
+usedSpace,2018-11-13 03:13:13,8%,WARNING
+usedSpace,2018-11-13 03:13:13,1%,OK
+usedSpace,2018-11-13 03:13:13,,OK
+usedSpace,2018-11-13 03:13:13,,OK
+usedSpace,2018-11-13 03:13:13,100%,OK
+usedMemory,2018-11-13 03:14:26,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-13 03:14:26,MEMORY Total:16558 Usage:777 Free:15175 Used:4%,
+cpuUsage,2018-11-13 03:14:26,"{'cpu2': 5.05, 'cpu': 5.02, 'cpu0': 1.01, 'cpu1': 7.07}",OK
+ping,2018-11-13 03:14:26,127.0.0.1,iactive
+ping,2018-11-13 03:14:26,192.168.1.1,iactive
+usedSpace,2018-11-13 03:14:26,,OK
+usedSpace,2018-11-13 03:14:26,,OK
+usedSpace,2018-11-13 03:14:26,3%,OK
+usedSpace,2018-11-13 03:14:26,,OK
+usedSpace,2018-11-13 03:14:26,,OK
+usedSpace,2018-11-13 03:14:26,,OK
+usedSpace,2018-11-13 03:14:26,100%,OK
+usedSpace,2018-11-13 03:14:26,100%,OK
+usedSpace,2018-11-13 03:14:26,100%,OK
+usedSpace,2018-11-13 03:14:26,100%,OK
+usedSpace,2018-11-13 03:14:26,100%,OK
+usedSpace,2018-11-13 03:14:26,100%,OK
+usedSpace,2018-11-13 03:14:26,100%,OK
+usedSpace,2018-11-13 03:14:26,100%,OK
+usedSpace,2018-11-13 03:14:26,100%,OK
+usedSpace,2018-11-13 03:14:26,100%,OK
+usedSpace,2018-11-13 03:14:26,100%,OK
+usedSpace,2018-11-13 03:14:26,100%,OK
+usedSpace,2018-11-13 03:14:26,8%,WARNING
+usedSpace,2018-11-13 03:14:26,1%,OK
+usedSpace,2018-11-13 03:14:26,,OK
+usedSpace,2018-11-13 03:14:26,,OK
+usedSpace,2018-11-13 03:14:26,100%,OK
+checkProcess,2018-11-13 03:14:26,httpd,is not running!
+checkProcess,2018-11-13 03:14:26,openhab2,is not running!
+checkProcess,2018-11-13 03:14:26,sshd,is up an running!
+usedMemory,2018-11-13 03:15:36,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-13 03:15:36,MEMORY Total:16558 Usage:777 Free:15175 Used:4%,
+cpuUsage,2018-11-13 03:15:36,"{'cpu2': 6.0, 'cpu': 5.35, 'cpu0': 6.93, 'cpu1': 4.04}",OK
+ping,2018-11-13 03:15:36,127.0.0.1,iactive
+ping,2018-11-13 03:15:36,192.168.1.1,iactive
+usedSpace,2018-11-13 03:15:36,,OK
+usedSpace,2018-11-13 03:15:36,,OK
+usedSpace,2018-11-13 03:15:36,3%,OK
+usedSpace,2018-11-13 03:15:36,,OK
+usedSpace,2018-11-13 03:15:36,,OK
+usedSpace,2018-11-13 03:15:36,,OK
+usedSpace,2018-11-13 03:15:36,100%,OK
+usedSpace,2018-11-13 03:15:36,100%,OK
+usedSpace,2018-11-13 03:15:36,100%,OK
+usedSpace,2018-11-13 03:15:36,100%,OK
+usedSpace,2018-11-13 03:15:36,100%,OK
+usedSpace,2018-11-13 03:15:36,100%,OK
+usedSpace,2018-11-13 03:15:36,100%,OK
+usedSpace,2018-11-13 03:15:36,100%,OK
+usedSpace,2018-11-13 03:15:36,100%,OK
+usedSpace,2018-11-13 03:15:36,100%,OK
+usedSpace,2018-11-13 03:15:36,100%,OK
+usedSpace,2018-11-13 03:15:36,100%,OK
+usedSpace,2018-11-13 03:15:36,8%,WARNING
+usedSpace,2018-11-13 03:15:36,1%,OK
+usedSpace,2018-11-13 03:15:36,,OK
+usedSpace,2018-11-13 03:15:36,,OK
+usedSpace,2018-11-13 03:15:36,100%,OK
+checkProcess,2018-11-13 03:15:36,httpd,is not running!
+checkProcess,2018-11-13 03:15:36,openhab2,is not running!
+checkProcess,2018-11-13 03:15:36,sshd,is up an running!
+usedMemory,2018-11-13 03:16:27,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-13 03:16:27,MEMORY Total:16558 Usage:776 Free:15175 Used:4%,
+cpuUsage,2018-11-13 03:16:27,"{'cpu2': 5.1, 'cpu': 4.36, 'cpu0': 4.95, 'cpu1': 5.0}",OK
+ping,2018-11-13 03:16:27,127.0.0.1,iactive
+ping,2018-11-13 03:16:27,192.168.1.1,iactive
+usedSpace,2018-11-13 03:16:27,,OK
+usedSpace,2018-11-13 03:16:27,,OK
+usedSpace,2018-11-13 03:16:27,3%,OK
+usedSpace,2018-11-13 03:16:27,,OK
+usedSpace,2018-11-13 03:16:27,,OK
+usedSpace,2018-11-13 03:16:27,,OK
+usedSpace,2018-11-13 03:16:27,100%,OK
+usedSpace,2018-11-13 03:16:27,100%,OK
+usedSpace,2018-11-13 03:16:27,100%,OK
+usedSpace,2018-11-13 03:16:27,100%,OK
+usedSpace,2018-11-13 03:16:27,100%,OK
+usedSpace,2018-11-13 03:16:27,100%,OK
+usedSpace,2018-11-13 03:16:27,100%,OK
+usedSpace,2018-11-13 03:16:27,100%,OK
+usedSpace,2018-11-13 03:16:27,100%,OK
+usedSpace,2018-11-13 03:16:27,100%,OK
+usedSpace,2018-11-13 03:16:27,100%,OK
+usedSpace,2018-11-13 03:16:27,100%,OK
+usedSpace,2018-11-13 03:16:27,8%,WARNING
+usedSpace,2018-11-13 03:16:27,1%,OK
+usedSpace,2018-11-13 03:16:27,,OK
+usedSpace,2018-11-13 03:16:27,,OK
+usedSpace,2018-11-13 03:16:27,100%,OK
+checkProcess,2018-11-13 03:16:27,httpd,is not running!
+checkProcess,2018-11-13 03:16:27,openhab2,is not running!
+checkProcess,2018-11-13 03:16:27,sshd,is up an running!
+usedMemory,2018-11-13 03:17:47,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-13 03:17:47,MEMORY Total:16558 Usage:777 Free:15175 Used:4%,
+cpuUsage,2018-11-13 03:17:47,"{'cpu2': 2.88, 'cpu': 2.58, 'cpu0': 1.94, 'cpu1': 2.94}",OK
+ping,2018-11-13 03:17:47,127.0.0.1,iactive
+ping,2018-11-13 03:17:47,192.168.1.1,iactive
+usedSpace,2018-11-13 03:17:47,,OK
+usedSpace,2018-11-13 03:17:47,,OK
+usedSpace,2018-11-13 03:17:47,3%,OK
+usedSpace,2018-11-13 03:17:47,,OK
+usedSpace,2018-11-13 03:17:47,,OK
+usedSpace,2018-11-13 03:17:47,,OK
+usedSpace,2018-11-13 03:17:47,100%,OK
+usedSpace,2018-11-13 03:17:47,100%,OK
+usedSpace,2018-11-13 03:17:47,100%,OK
+usedSpace,2018-11-13 03:17:47,100%,OK
+usedSpace,2018-11-13 03:17:47,100%,OK
+usedSpace,2018-11-13 03:17:47,100%,OK
+usedSpace,2018-11-13 03:17:47,100%,OK
+usedSpace,2018-11-13 03:17:47,100%,OK
+usedSpace,2018-11-13 03:17:47,100%,OK
+usedSpace,2018-11-13 03:17:47,100%,OK
+usedSpace,2018-11-13 03:17:47,100%,OK
+usedSpace,2018-11-13 03:17:47,100%,OK
+usedSpace,2018-11-13 03:17:47,8%,WARNING
+usedSpace,2018-11-13 03:17:47,1%,OK
+usedSpace,2018-11-13 03:17:47,,OK
+usedSpace,2018-11-13 03:17:47,,OK
+usedSpace,2018-11-13 03:17:47,100%,OK
+checkProcess,2018-11-13 03:17:47,httpd,is not running!
+checkProcess,2018-11-13 03:17:47,openhab2,is not running!
+checkProcess,2018-11-13 03:17:47,sshd,is up an running!
+usedMemory,2018-11-13 03:20:48,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-13 03:20:48,MEMORY Total:16558 Usage:778 Free:15172 Used:4%,
+cpuUsage,2018-11-13 03:20:48,"{'cpu2': 4.9, 'cpu': 5.0, 'cpu0': 5.0, 'cpu1': 6.0}",OK
+ping,2018-11-13 03:20:48,127.0.0.1,iactive
+ping,2018-11-13 03:20:48,192.168.1.1,iactive
+usedSpace,2018-11-13 03:20:48,,OK
+usedSpace,2018-11-13 03:20:48,,OK
+usedSpace,2018-11-13 03:20:48,3%,OK
+usedSpace,2018-11-13 03:20:48,,OK
+usedSpace,2018-11-13 03:20:48,,OK
+usedSpace,2018-11-13 03:20:48,,OK
+usedSpace,2018-11-13 03:20:48,100%,OK
+usedSpace,2018-11-13 03:20:48,100%,OK
+usedSpace,2018-11-13 03:20:48,100%,OK
+usedSpace,2018-11-13 03:20:48,100%,OK
+usedSpace,2018-11-13 03:20:48,100%,OK
+usedSpace,2018-11-13 03:20:48,100%,OK
+usedSpace,2018-11-13 03:20:48,100%,OK
+usedSpace,2018-11-13 03:20:48,100%,OK
+usedSpace,2018-11-13 03:20:48,100%,OK
+usedSpace,2018-11-13 03:20:48,100%,OK
+usedSpace,2018-11-13 03:20:48,100%,OK
+usedSpace,2018-11-13 03:20:48,100%,OK
+usedSpace,2018-11-13 03:20:48,8%,WARNING
+usedSpace,2018-11-13 03:20:48,1%,OK
+usedSpace,2018-11-13 03:20:48,,OK
+usedSpace,2018-11-13 03:20:48,,OK
+usedSpace,2018-11-13 03:20:48,100%,OK
+checkProcess,2018-11-13 03:20:48,httpd,is not running!
+checkProcess,2018-11-13 03:20:48,openhab2,is not running!
+checkProcess,2018-11-13 03:20:48,sshd,is up an running!
+usedMemory,2018-11-13 03:22:38,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-13 03:22:38,MEMORY Total:16558 Usage:778 Free:15172 Used:4%,
+cpuUsage,2018-11-13 03:22:38,"{'cpu2': 2.0, 'cpu': 1.68, 'cpu0': 1.01, 'cpu1': 2.02}",OK
+ping,2018-11-13 03:22:38,127.0.0.1,iactive
+ping,2018-11-13 03:22:38,192.168.1.1,iactive
+usedSpace,2018-11-13 03:22:38,,OK
+usedSpace,2018-11-13 03:22:38,,OK
+usedSpace,2018-11-13 03:22:38,3%,OK
+usedSpace,2018-11-13 03:22:38,,OK
+usedSpace,2018-11-13 03:22:38,,OK
+usedSpace,2018-11-13 03:22:38,,OK
+usedSpace,2018-11-13 03:22:38,100%,OK
+usedSpace,2018-11-13 03:22:38,100%,OK
+usedSpace,2018-11-13 03:22:38,100%,OK
+usedSpace,2018-11-13 03:22:38,100%,OK
+usedSpace,2018-11-13 03:22:38,100%,OK
+usedSpace,2018-11-13 03:22:38,100%,OK
+usedSpace,2018-11-13 03:22:38,100%,OK
+usedSpace,2018-11-13 03:22:38,100%,OK
+usedSpace,2018-11-13 03:22:38,100%,OK
+usedSpace,2018-11-13 03:22:38,100%,OK
+usedSpace,2018-11-13 03:22:38,100%,OK
+usedSpace,2018-11-13 03:22:38,100%,OK
+usedSpace,2018-11-13 03:22:38,8%,WARNING
+usedSpace,2018-11-13 03:22:38,1%,OK
+usedSpace,2018-11-13 03:22:38,,OK
+usedSpace,2018-11-13 03:22:38,,OK
+usedSpace,2018-11-13 03:22:38,100%,OK
+checkProcess,2018-11-13 03:22:38,httpd,is not running!
+checkProcess,2018-11-13 03:22:38,openhab2,is not running!
+checkProcess,2018-11-13 03:22:38,sshd,is up an running!

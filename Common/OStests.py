@@ -58,23 +58,27 @@ def pingAllHosts():
 		logTestResult(testname,ip,"iactive")
 
 def usedSpace():
-    used_space=os.popen("df -h / | grep -v Filesystem | awk '{print $5}'").readline().strip()
     testname ="usedSpace"
     diskSpace_critic = settings.config['DiskSpaceThreshold']['CRITICAL']+"%"
     diskSpace_major = settings.config['DiskSpaceThreshold']['MAJOR']+"%"
     diskSpace_warning = settings.config['DiskSpaceThreshold']['WARNING']+"%"
-    if (used_space < diskSpace_warning):
-        print("OK - %s of disk space used." % used_space)
-        logTestResult(testname,used_space,"OK")
-    elif (used_space > diskSpace_warning and used_space < diskSpace_major):
-       	print("WARNING - %s of disk space used." % used_space)
-	logTestResult(testname,used_space,"WARNING")
-    elif (used_space > diskSpace_critic):
-       	print("CRITICAL - %s of disk space used." % used_space)
-	logTestResult(testname,used_space,"CRITICAL")
-    else:
-       	print("UKNOWN - %s of disk space used." % used_space)
-	logTestResult(testname,used_space,"UKNOWN")
+    partitions= os.popen("df -h | grep -v Filesystem | awk '{print $1}'").readlines()
+    for partition in partitions:
+	command ="df -h " + partition.strip('\n') + " | grep -v Filesystem | awk '{print $5}'"
+	used_space = os.popen(command).readline().strip('\n')
+	#print (used_space)
+    	if (used_space <= diskSpace_warning):
+        	print (partition.strip('\n') + " OK - %s of disk space used." % used_space)
+        	logTestResult(testname,used_space,"OK")
+    	elif (used_space > diskSpace_warning and used_space <= diskSpace_critic):
+       		print(partition.strip('\n') + " WARNING - %s of disk space used." % used_space)
+		logTestResult(testname,used_space,"WARNING")
+    	elif (used_space > diskSpace_critic):
+       		print colored(partition.strip('\n') + " CRITICAL - %s of disk space used." % used_space,'red')
+		logTestResult(testname,used_space,"CRITICAL")
+    	else:
+       		print(partition .strip('\n') + " UKNOWN - %s of disk space used." % used_space)
+		logTestResult(testname,used_space,"UKNOWN")
 
 def usedMemory():
 	testname="usedMemory"
