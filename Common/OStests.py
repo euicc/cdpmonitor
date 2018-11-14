@@ -8,6 +8,7 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import settings
 from modules.termcolor.termcolor import colored
+from modules import psutil
 ts = time.time()
 
 
@@ -208,5 +209,6 @@ def cpuUsage():
         print cpu_info
         logTestResult(testname,cpu_info,"CRITIC")
 
-
-
+def systemInfo():
+	print colored("System information",'magenta')
+	print ("Nb of CPU: "+ str(psutil.cpu_count()))
