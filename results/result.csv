@@ -1818,3 +1818,93 @@ usedSpace,2018-11-14 03:05:47,100,OK
 checkProcess,2018-11-14 03:05:47,httpd,is not running!
 checkProcess,2018-11-14 03:05:47,openhab2,is not running!
 checkProcess,2018-11-14 03:05:47,sshd,is up an running!
+usedMemory,2018-11-14 07:38:46,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-14 07:38:46,MEMORY Total:12526 Usage:729 Free:11181 Used:5%,
+cpuUsage,2018-11-14 07:38:46,"{'cpu': 4.0, 'cpu0': 4.0}",OK
+ping,2018-11-14 07:38:46,127.0.0.1,iactive
+ping,2018-11-14 07:38:46,192.168.1.1,inactive
+usedSpace,2018-11-14 07:38:46,,OK
+usedSpace,2018-11-14 07:38:46,,OK
+usedSpace,2018-11-14 07:38:46,3,OK
+usedSpace,2018-11-14 07:38:46,,OK
+usedSpace,2018-11-14 07:38:46,,OK
+usedSpace,2018-11-14 07:38:46,,OK
+usedSpace,2018-11-14 07:38:46,100,OK
+usedSpace,2018-11-14 07:38:46,100,OK
+usedSpace,2018-11-14 07:38:46,100,OK
+usedSpace,2018-11-14 07:38:46,100,OK
+usedSpace,2018-11-14 07:38:46,100,OK
+usedSpace,2018-11-14 07:38:46,100,OK
+usedSpace,2018-11-14 07:38:46,100,OK
+usedSpace,2018-11-14 07:38:46,100,OK
+usedSpace,2018-11-14 07:38:46,100,OK
+usedSpace,2018-11-14 07:38:46,100,OK
+usedSpace,2018-11-14 07:38:46,100,OK
+usedSpace,2018-11-14 07:38:46,100,OK
+usedSpace,2018-11-14 07:38:46,1,OK
+usedSpace,2018-11-14 07:38:46,8,WARNING
+usedSpace,2018-11-14 07:38:46,,OK
+usedSpace,2018-11-14 07:38:46,100,OK
+checkProcess,2018-11-14 07:38:46,httpd,is not running!
+checkProcess,2018-11-14 07:38:46,openhab2,is not running!
+checkProcess,2018-11-14 07:38:46,sshd,is up an running!
+usedMemory,2018-11-16 09:54:13,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-16 09:54:13,MEMORY Total:12526 Usage:796 Free:10137 Used:6%,
+cpuUsage,2018-11-16 09:54:13,"{'cpu': 3.0, 'cpu0': 3.0}",OK
+ping,2018-11-16 09:54:13,127.0.0.1,iactive
+ping,2018-11-16 09:54:13,192.168.1.1,inactive
+usedSpace,2018-11-16 09:54:13,,OK
+usedSpace,2018-11-16 09:54:13,,OK
+usedSpace,2018-11-16 09:54:13,3,OK
+usedSpace,2018-11-16 09:54:13,,OK
+usedSpace,2018-11-16 09:54:13,,OK
+usedSpace,2018-11-16 09:54:13,,OK
+usedSpace,2018-11-16 09:54:13,100,OK
+usedSpace,2018-11-16 09:54:13,100,OK
+usedSpace,2018-11-16 09:54:13,100,OK
+usedSpace,2018-11-16 09:54:13,100,OK
+usedSpace,2018-11-16 09:54:13,100,OK
+usedSpace,2018-11-16 09:54:13,100,OK
+usedSpace,2018-11-16 09:54:13,100,OK
+usedSpace,2018-11-16 09:54:13,100,OK
+usedSpace,2018-11-16 09:54:13,100,OK
+usedSpace,2018-11-16 09:54:13,100,OK
+usedSpace,2018-11-16 09:54:13,100,OK
+usedSpace,2018-11-16 09:54:13,100,OK
+usedSpace,2018-11-16 09:54:13,14,OK
+usedSpace,2018-11-16 09:54:13,1,OK
+usedSpace,2018-11-16 09:54:13,,OK
+usedSpace,2018-11-16 09:54:13,100,OK
+checkProcess,2018-11-16 09:54:13,httpd,is not running!
+checkProcess,2018-11-16 09:54:13,openhab2,is not running!
+checkProcess,2018-11-16 09:54:13,sshd,is up an running!
+usedMemory,2018-11-17 10:52:26,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-17 10:52:26,MEMORY Total:12526 Usage:754 Free:11112 Used:6%,
+cpuUsage,2018-11-17 10:52:26,"{'cpu': 5.0, 'cpu0': 5.0}",OK
+ping,2018-11-17 10:52:26,127.0.0.1,iactive
+ping,2018-11-17 10:52:26,192.168.1.1,inactive
+usedSpace,2018-11-17 10:52:26,,OK
+usedSpace,2018-11-17 10:52:26,,OK
+usedSpace,2018-11-17 10:52:26,3,OK
+usedSpace,2018-11-17 10:52:26,,OK
+usedSpace,2018-11-17 10:52:26,,OK
+usedSpace,2018-11-17 10:52:26,,OK
+usedSpace,2018-11-17 10:52:26,100,OK
+usedSpace,2018-11-17 10:52:26,100,OK
+usedSpace,2018-11-17 10:52:26,100,OK
+usedSpace,2018-11-17 10:52:26,100,OK
+usedSpace,2018-11-17 10:52:26,100,OK
+usedSpace,2018-11-17 10:52:26,100,OK
+usedSpace,2018-11-17 10:52:26,100,OK
+usedSpace,2018-11-17 10:52:26,100,OK
+usedSpace,2018-11-17 10:52:26,100,OK
+usedSpace,2018-11-17 10:52:26,100,OK
+usedSpace,2018-11-17 10:52:26,100,OK
+usedSpace,2018-11-17 10:52:26,100,OK
+usedSpace,2018-11-17 10:52:26,1,OK
+usedSpace,2018-11-17 10:52:26,14,OK
+usedSpace,2018-11-17 10:52:26,,OK
+usedSpace,2018-11-17 10:52:26,100,OK
+checkProcess,2018-11-17 10:52:26,httpd,is not running!
+checkProcess,2018-11-17 10:52:26,openhab2,is not running!
+checkProcess,2018-11-17 10:52:26,sshd,is up an running!
