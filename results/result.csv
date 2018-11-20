@@ -1,0 +1,62 @@
+usedMemory,2018-11-20 06:38:38,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-20 06:38:38,MEMORY Total:12526 Usage:775 Free:11073 Used:6%,
+cpuUsage,2018-11-20 06:38:38,"{'cpu': 4.04, 'cpu0': 4.04}",OK
+ping,2018-11-20 06:38:38,127.0.0.1,iactive
+ping,2018-11-20 06:38:38,192.168.1.1,inactive
+usedSpace,2018-11-20 06:38:38,,OK
+usedSpace,2018-11-20 06:38:38,,OK
+usedSpace,2018-11-20 06:38:38,3,OK
+usedSpace,2018-11-20 06:38:38,,OK
+usedSpace,2018-11-20 06:38:38,,OK
+usedSpace,2018-11-20 06:38:38,,OK
+usedSpace,2018-11-20 06:38:38,100,OK
+usedSpace,2018-11-20 06:38:38,100,OK
+usedSpace,2018-11-20 06:38:38,100,OK
+usedSpace,2018-11-20 06:38:38,100,OK
+usedSpace,2018-11-20 06:38:38,100,OK
+usedSpace,2018-11-20 06:38:38,100,OK
+usedSpace,2018-11-20 06:38:38,100,OK
+usedSpace,2018-11-20 06:38:38,100,OK
+usedSpace,2018-11-20 06:38:38,100,OK
+usedSpace,2018-11-20 06:38:38,100,OK
+usedSpace,2018-11-20 06:38:38,100,OK
+usedSpace,2018-11-20 06:38:38,100,OK
+usedSpace,2018-11-20 06:38:38,100,OK
+usedSpace,2018-11-20 06:38:38,1,OK
+usedSpace,2018-11-20 06:38:38,14,OK
+usedSpace,2018-11-20 06:38:38,,OK
+usedSpace,2018-11-20 06:38:38,100,OK
+checkProcess,2018-11-20 06:38:38,httpd,is not running!
+checkProcess,2018-11-20 06:38:38,openhab2,is not running!
+checkProcess,2018-11-20 06:38:38,sshd,is up an running!
+usedMemory,2018-11-20 06:39:51,SWAP Total:8581 Usage:0 Free:8581 Used:0%,
+usedMemory,2018-11-20 06:39:51,MEMORY Total:12526 Usage:776 Free:11072 Used:6%,
+cpuUsage,2018-11-20 06:39:51,"{'cpu': 3.06, 'cpu0': 3.06}",OK
+ping,2018-11-20 06:39:51,127.0.0.1,iactive
+ping,2018-11-20 06:39:51,192.168.1.1,inactive
+usedSpace,2018-11-20 06:39:51,,OK
+usedSpace,2018-11-20 06:39:51,,OK
+usedSpace,2018-11-20 06:39:51,3,OK
+usedSpace,2018-11-20 06:39:51,,OK
+usedSpace,2018-11-20 06:39:51,,OK
+usedSpace,2018-11-20 06:39:51,,OK
+usedSpace,2018-11-20 06:39:51,100,OK
+usedSpace,2018-11-20 06:39:51,100,OK
+usedSpace,2018-11-20 06:39:51,100,OK
+usedSpace,2018-11-20 06:39:51,100,OK
+usedSpace,2018-11-20 06:39:51,100,OK
+usedSpace,2018-11-20 06:39:51,100,OK
+usedSpace,2018-11-20 06:39:51,100,OK
+usedSpace,2018-11-20 06:39:51,100,OK
+usedSpace,2018-11-20 06:39:51,100,OK
+usedSpace,2018-11-20 06:39:51,100,OK
+usedSpace,2018-11-20 06:39:51,100,OK
+usedSpace,2018-11-20 06:39:51,100,OK
+usedSpace,2018-11-20 06:39:51,100,OK
+usedSpace,2018-11-20 06:39:51,1,OK
+usedSpace,2018-11-20 06:39:51,14,OK
+usedSpace,2018-11-20 06:39:51,,OK
+usedSpace,2018-11-20 06:39:51,100,OK
+checkProcess,2018-11-20 06:39:51,httpd,is not running!
+checkProcess,2018-11-20 06:39:51,openhab2,is not running!
+checkProcess,2018-11-20 06:39:51,sshd,is up an running!
