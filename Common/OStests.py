@@ -1,21 +1,12 @@
 import subprocess
 import os
-import csv
-import time
 from time import sleep
-import datetime
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-import settings
+import helpers
 from modules.termcolor.termcolor import colored
 from modules import psutil
-ts = time.time()
 
-
-timestamp = datetime.datetime.fromtimestamp(int(ts)).strftime('%Y-%m-%d %H:%M:%S')
-
-
-filename = "results/result.csv"
 
 if "check_output" not in dir( subprocess ): # duck punch it in!
     def f(*popenargs, **kwargs):
@@ -39,10 +30,10 @@ def checkProcess():
  for i in processes:
   if i in output:
     print(i + " is up an running!")
-    logTestResult(testname,i,"is up an running!")
+    helpers.logTestResult(testname,i,"is up an running!")
   else:
     print(i+ " is not running!")
-    logTestResult(testname,i,"is not running!")
+    helpers.logTestResult(testname,i,"is not running!")
 
 def pingAllHosts():
   testname="ping"
@@ -53,16 +44,16 @@ def pingAllHosts():
             result=subprocess.Popen(["ping", "-c", "1", "-n", "-W", "2",    ip],stdout=f, stderr=f).wait()
             if result:
                 print(ip, "inactive")
-		logTestResult(testname,ip,"inactive")
+		helpers.logTestResult(testname,ip,"inactive")
             else:
                 print(ip, "active")
-		logTestResult(testname,ip,"iactive")
+		helpers.logTestResult(testname,ip,"iactive")
 
 def usedSpace():
     testname ="usedSpace"
-    diskSpace_critic = settings.config['DiskSpaceThreshold']['CRITICAL']
-    diskSpace_major = settings.config['DiskSpaceThreshold']['MAJOR']
-    diskSpace_warning = settings.config['DiskSpaceThreshold']['WARNING']
+    diskSpace_critic = helpers.config['DiskSpaceThreshold']['CRITICAL']
+    diskSpace_major = helpers.config['DiskSpaceThreshold']['MAJOR']
+    diskSpace_warning = helpers.config['DiskSpaceThreshold']['WARNING']
     partitions= os.popen("df -h | grep -v Filesystem | awk '{print $1}'").readlines()
     for partition in partitions:
 	command ="df -h " + partition.strip('\n') + " | grep -v Filesystem | awk '{print $5}'"
@@ -70,49 +61,49 @@ def usedSpace():
 	print (used_space)
     	if (used_space <= diskSpace_warning):
         	print (partition.strip('\n') + " OK " + used_space + "% of disk space used.")
-        	logTestResult(testname,used_space,"OK")
+        	helpers.logTestResult(testname,used_space,"OK")
     	elif (used_space > diskSpace_warning and used_space <= diskSpace_critic):
        		print(partition.strip('\n') + " WARNING - " + used_space +"% of disk space used.")
-		logTestResult(testname,used_space,"WARNING")
+		helpers.logTestResult(testname,used_space,"WARNING")
     	elif (used_space > diskSpace_critic):
        		print colored(partition.strip('\n') + " CRITICAL - %s of disk space used." % used_space,'red')
-		logTestResult(testname,used_space,"CRITICAL")
+		helpers.logTestResult(testname,used_space,"CRITICAL")
     	else:
        		print(partition .strip('\n') + " UKNOWN - %s of disk space used." % used_space)
-		logTestResult(testname,used_space,"UKNOWN")
+		helpers.logTestResult(testname,used_space,"UKNOWN")
 
 def usedMemory():
 	testname="usedMemory"
 	tot_m, used_m, free_m = map(int, os.popen('free -t -m').readlines()[-1].split()[1:])
 	swap_t, swap_u, swap_f = map(int, os.popen('free -t -m').readlines()[-2].split()[1:])
 
-	mem_critic = settings.config['MemoryThreshold']['CRITICAL']
-	mem_major = settings.config['MemoryThreshold']['MAJOR']
-	mem_warning = settings.config['MemoryThreshold']['WARNING']
+	mem_critic = helpers.config['MemoryThreshold']['CRITICAL']
+	mem_major = helpers.config['MemoryThreshold']['MAJOR']
+	mem_warning = helpers.config['MemoryThreshold']['WARNING']
 
 	if (swap_t !=0):
                 swap_percent = swap_u*100/swap_t
                 if swap_percent < int(mem_warning) :
                         print colored("--- SWAP usage OK --- ",'green')
                         print("SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%")
-                        logTestResult(testname,"SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%","")
+                        helpers.logTestResult(testname,"SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%","")
                 elif swap_percent >= int(mem_warning) and swap_percent < int(mem_major):
                         print colored("--- SWAP usage NOK --- in Warning alarm", 'yellow')
                         print("SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%")
-                        logTestResult(testname,"SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%","")
+                        helpers.logTestResult(testname,"SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%","")
                 elif swap_percent >= int(mem_major) and swap_percent < int(mem_critic):
                         print colored("--- SWAP usage NOK --- in Major alarm", 'magenta')
                         print("SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%")
-                        logTestResult(testname,"SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%","")
+                        helpers.logTestResult(testname,"SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%","")
                 elif swap_percent >= int(mem_critic):
                         print colored("--- SWAP usage NOK --- in Critical alarm", 'red')
                         print("SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%")
-                        logTestResult(testname,"SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%","")
+                        helpers.logTestResult(testname,"SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%","")
         else:
                 swap_percent = swap_u
                 print colored("--- SWAP Not initialized --- ",'green')
                 print("SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%")
-                logTestResult(testname,"SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%","")
+                helpers.logTestResult(testname,"SWAP Total:" + str(swap_t) + " Usage:" + str(swap_u) + " Free:" + str(swap_f) + " Used:" + str(swap_percent) + "%","")
 
 
 	mem_percent =  int(used_m*100/tot_m)
@@ -120,25 +111,19 @@ def usedMemory():
 	if mem_percent < int(mem_warning):
         	print colored("--- MEMORY usage OK --- ",'green')
         	print("MEMORY Total:" + str(tot_m) + " Usage:" + str(used_m) + " Free:" + str(free_m) + " Used:" + str(mem_percent) + "%")
-		logTestResult(testname,"MEMORY Total:" + str(tot_m) + " Usage:" + str(used_m) + " Free:" + str(free_m) + " Used:" + str(mem_percent) + "%","")
+		helpers.logTestResult(testname,"MEMORY Total:" + str(tot_m) + " Usage:" + str(used_m) + " Free:" + str(free_m) + " Used:" + str(mem_percent) + "%","")
 	elif mem_percent >= int(mem_warning) and mem_percent < int(mem_major):
         	print colored("--- MEMORY usage NOK --- in Warning alarm", 'yellow')
         	print("MEMORY Total:" + str(tot_m) + " Usage:" + str(used_m) + " Free:" + str(free_m) + " Used:" + str(mem_percent) + "%")
-		logTestResult(testname,"MEMORY Total:" + str(tot_m) + " Usage:" + str(used_m) + " Free:" + str(free_m) + " Used:" + str(mem_percent) + "%","")
+		helpers.logTestResult(testname,"MEMORY Total:" + str(tot_m) + " Usage:" + str(used_m) + " Free:" + str(free_m) + " Used:" + str(mem_percent) + "%","")
 	elif mem_percent >= int(mem_major) and mem_percent < int(mem_critic):
         	print colored("--- MEMORY usage NOK --- in Major alarm", 'magenta')
         	print("MEMORY Total:" + str(tot_m) + " Usage:" + str(used_m) + " Free:" + str(free_m) + " Used:" + str(mem_percent) + "%")
-		logTestResult(testname,"MEMORY Total:" + str(tot_m) + " Usage:" + str(used_m) + " Free:" + str(free_m) + " Used:" + str(mem_percent) + "%","")
+		helpers.logTestResult(testname,"MEMORY Total:" + str(tot_m) + " Usage:" + str(used_m) + " Free:" + str(free_m) + " Used:" + str(mem_percent) + "%","")
 	elif mem_percent >= int(mem_critic):
         	print colored("--- MEMORY usage NOK --- in Critical alarm", 'red')
         	print("MEMORY Total:" + str(tot_m) + " Usage:" + str(used_m) + " Free:" + str(free_m) + " Used:" + str(mem_percent) + "%")
-		logTestResult(testname,"MEMORY Total:" + str(tot_m) + " Usage:" + str(used_m) + " Free:" + str(free_m) + " Used:" + str(mem_percent) + "%","")
-
-def logTestResult(testname,data,state):
-    with open(filename, 'a') as csvfile:
-        resultwriter = csv.writer(csvfile, delimiter=',')
-        resultwriter.writerow([testname,timestamp,data,state])
-
+		helpers.logTestResult(testname,"MEMORY Total:" + str(tot_m) + " Usage:" + str(used_m) + " Free:" + str(free_m) + " Used:" + str(mem_percent) + "%","")
 
 class GetCpuLoad(object):
     def __init__(self, percentage=True, sleeptime = 1):
@@ -188,26 +173,26 @@ def cpuUsage():
     usage = cpu_info['cpu']
     testname="cpuUsage"
 
-    cpuUsage_critic = settings.config['CpuThreshold']['CRITICAL']
-    cpuUsage_major = settings.config['CpuThreshold']['MAJOR']
-    cpuUsage_warning = settings.config['CpuThreshold']['WARNING']
+    cpuUsage_critic = helpers.config['CpuThreshold']['CRITICAL']
+    cpuUsage_major = helpers.config['CpuThreshold']['MAJOR']
+    cpuUsage_warning = helpers.config['CpuThreshold']['WARNING']
 
     if usage < int(cpuUsage_warning):
 	print colored("--- CPU USAGE OK --- ",'green')
 	print cpu_info
-        logTestResult(testname,cpu_info,"OK")
+        helpers.logTestResult(testname,cpu_info,"OK")
     elif usage >= int(cpuUsage_warning) and usage < int(cpuUsage_major):
 	print colored("--- CPU USAGE NOK --- ",'yellow')
         print cpu_info
-        logTestResult(testname,cpu_info,"WARNING")
+        helpers.logTestResult(testname,cpu_info,"WARNING")
     elif usage >= int(cpuUsage_major) and usage < int(cpuUsage_critic):
         print colored("--- CPU USAGE NOK --- ",'magenta')
         print cpu_info
-        logTestResult(testname,cpu_info,"MAJOR")
+        helpers.logTestResult(testname,cpu_info,"MAJOR")
     elif usage >= int(cpuUsage_critic):
         print colored("--- CPU USAGE NOK --- ",'red')
         print cpu_info
-        logTestResult(testname,cpu_info,"CRITIC")
+        helpers.logTestResult(testname,cpu_info,"CRITIC")
 
 def systemInfo():
 	print colored("System information",'magenta')
