@@ -1,11 +1,11 @@
 import time
-import modules.pexpect
+import pexpect
 
 def jmx():
-	connection = "localhost:3993"
+	connection = "cdpsrv:4712"
 	connection_timeout = 2
 
-	jmxterm = modules.pexpect.spawn("java -jar jmxterm-1.0-alpha-4-uber.jar")
+	jmxterm = pexpect.spawn("java -jar jmxterm-1.0.0-uber.jar -u mdmadmin -p mdmadmin@1234 ")
 	jmxterm.expect_exact("$>") # got prompt, we can continue
 	jmxterm.sendline("open " + connection)
 	jmxterm.expect_exact("#Connection to "+connection+" is opened", connection_timeout)
