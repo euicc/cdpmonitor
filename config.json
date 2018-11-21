@@ -14,7 +14,7 @@
   "COMMONTESTS":["systemInfo","usedMemory","cpuUsage","pingAllHosts","usedSpace","checkProcess"],
   "HALTESTS":[],
   "HDMTESTS":[],
-  "CDPTESTS":[],
+  "CDPTESTS":["jmx"],
   "DiskSpaceThreshold":{
      "CRITICAL":"95",
      "MAJOR":"85",
